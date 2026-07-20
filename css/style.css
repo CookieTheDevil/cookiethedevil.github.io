@@ -1,8 +1,60 @@
+/*TODO: Divide into multiple files for better organization */
+
 :root {
-    --nice-blue: skyblue; 
+    --nice-blue: deepskyblue; 
+    --primary-font: Comic Sans MS; 
+    --primary-font-color: azure; 
+    --secondary-font-color: #00AAFF;
 }
 
-h1 {
-    color: var(--nice-blue);
-    font-family: Comic Sans MS, cursive, sans-serif;
+h1, h2 {
+    font-family: var(--primary-font), cursive, sans-serif;
+    color: var(--primary-font-color);
+    text-shadow: -2px 0 var(--secondary-font-color), 0 2px var(--secondary-font-color), 2px 0 var(--secondary-font-color), 0 -2px var(--secondary-font-color);
+    text-align: center;
+}
+
+body {
+    background-color: var(--nice-blue);
+    text-align: center;
+}
+
+main {
+    padding: 33vh 10vw;
+}
+
+.temporary-empty {
+    font-family: var(--primary-font), cursive, sans-serif;
+    color: var(--primary-font-color);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#projects-link-container {
+    font-family: var(--primary-font), cursive, sans-serif;
+    font-size: 1.5em;
+    color: var(--secondary-font-color);
+    background-color: floralwhite;
+    border: 4px solid #00AAFF; 
+    border-radius: 10px; 
+    text-align: center;
+    padding: 10px 20px; 
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    width: fit-content; 
+    display: inline-block;
+    box-shadow: 5px 5px 5px #008BD1;
+}
+
+#projects-link-container a,
+#projects-link-container a:visited,
+#projects-link-container a:hover,
+#projects-link-container a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+#projects-link-container:hover {
+    background-color: #00AAFF; 
+    color: floralwhite; 
+    transform: scale(5);
 }

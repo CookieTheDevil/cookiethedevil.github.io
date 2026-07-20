@@ -1,0 +1,85 @@
+/* Grid layout for the art piece */
+#art-container {
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    margin: 0 auto;
+    border: 40px solid black; 
+}
+
+#white-surroundings {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /*This is how you center a div btw */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#square-holder {
+    width: 95%;
+    height: 95%;
+    display: grid;
+    grid-template-areas: 
+        'white1 red1 red1 red1' 
+        'white2 red1 red1 red1'
+        'blue1 longwhite longwhite white-yellow';
+    grid-template-columns: 150px 1fr 1fr 30px;
+    grid-template-rows: 1fr 1fr 150px;
+    row-gap: 20px; 
+    column-gap: 15px;
+    background-color: black; /* color of the grid gaps */
+    border: 1px solid gainsboro; 
+}
+
+.white {
+    background-color: linen;
+}
+
+#first-white {
+    grid-area: white1;
+}
+
+#second-white {
+    grid-area: white2;
+}
+
+#big-red {
+    grid-area: red1;
+    background-color: red;
+}
+
+#blue-corner {
+    grid-area: blue1;
+    background-color: darkblue;
+    position: relative; 
+}
+
+#signature {
+    position: absolute; 
+    bottom: 0px; 
+    right: 0px; 
+}
+
+#long-white {
+    grid-area: longwhite;
+}
+
+#white-yellow {
+    grid-area: white-yellow;
+    background-color: black; 
+}
+
+#small-white {
+    background-color: white;
+    width: 100%;
+    height: 50%; 
+    border-bottom: 15px solid black;
+}
+
+#small-yellow {
+    background-color: gold;
+    width: 100%;
+    height: 40%
+}
