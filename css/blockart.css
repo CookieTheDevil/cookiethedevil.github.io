@@ -1,18 +1,91 @@
-/* Grid layout for the art piece */
+:root {
+    --nice-blue: deepskyblue;
+    --primary-font: "Comic Sans MS";
+    --primary-font-color: azure;
+    --secondary-font-color: #00AAFF;
+
+    --art-size: min(82vw, calc(100vh - 13rem));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0.5rem;
+
+    background-color: var(--nice-blue);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1,
+h2 {
+    font-family: var(--primary-font), cursive, sans-serif;
+    color: var(--primary-font-color);
+    text-shadow:
+        -2px 0 var(--secondary-font-color),
+        0 2px var(--secondary-font-color),
+        2px 0 var(--secondary-font-color),
+        0 -2px var(--secondary-font-color);
+
+    text-align: center;
+    margin: 0.2rem 0;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: min(2rem, 5vh);
+}
+
+h2 {
+    font-size: min(1.5rem, 4vh);
+}
+
+.temporary-empty {
+    font-family: var(--primary-font), cursive, sans-serif;
+    color: var(--primary-font-color);
+    font-size: min(1.25rem, 3vh);
+    text-align: center;
+
+    margin: 0.15rem 0;
+    line-height: 1.1;
+}
+
+/* Remove the large padding from your existing main rule */
+main {
+    padding: 0;
+}
+
+/* Entire artwork */
 #art-container {
-    width: 600px;
-    height: 600px;
+    width: var(--art-size);
+    height: var(--art-size);
+
     background-color: white;
-    margin: 0 auto;
-    border: 40px solid black; 
+    border: calc(var(--art-size) * 0.0667) solid black;
+
+    margin: auto;
+    flex-shrink: 0;
 }
 
 #white-surroundings {
     width: 100%;
     height: 100%;
     background-color: white;
-    /*This is how you center a div btw */
-    display: flex; 
+
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -20,17 +93,30 @@
 #square-holder {
     width: 95%;
     height: 95%;
+
     display: grid;
-    grid-template-areas: 
-        'white1 red1 red1 red1' 
-        'white2 red1 red1 red1'
-        'blue1 longwhite longwhite white-yellow';
-    grid-template-columns: 150px 1fr 1fr 30px;
-    grid-template-rows: 1fr 1fr 150px;
-    row-gap: 20px; 
-    column-gap: 15px;
-    background-color: black; /* color of the grid gaps */
-    border: 1px solid gainsboro; 
+
+    grid-template-areas:
+        "white1 red1 red1 red1"
+        "white2 red1 red1 red1"
+        "blue1 longwhite longwhite white-yellow";
+
+    grid-template-columns:
+        calc(var(--art-size) * 0.25)
+        1fr
+        1fr
+        calc(var(--art-size) * 0.05);
+
+    grid-template-rows:
+        1fr
+        1fr
+        calc(var(--art-size) * 0.25);
+
+    row-gap: calc(var(--art-size) * 0.0333);
+    column-gap: calc(var(--art-size) * 0.025);
+
+    background-color: black;
+    border: calc(var(--art-size) * 0.0017) solid gainsboro;
 }
 
 .white {
@@ -53,13 +139,16 @@
 #blue-corner {
     grid-area: blue1;
     background-color: darkblue;
-    position: relative; 
+    position: relative;
 }
 
 #signature {
-    position: absolute; 
-    bottom: 0px; 
-    right: 0px; 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    margin: 0;
+    font-size: calc(var(--art-size) * 0.025);
 }
 
 #long-white {
@@ -68,18 +157,21 @@
 
 #white-yellow {
     grid-area: white-yellow;
-    background-color: black; 
+    background-color: black;
 }
 
 #small-white {
-    background-color: white;
     width: 100%;
-    height: 50%; 
-    border-bottom: 15px solid black;
+    height: 50%;
+    background-color: white;
+
+    border-bottom:
+        calc(var(--art-size) * 0.025)
+        solid black;
 }
 
 #small-yellow {
-    background-color: gold;
     width: 100%;
-    height: 40%
+    height: 40%;
+    background-color: gold;
 }

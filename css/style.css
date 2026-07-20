@@ -12,12 +12,38 @@ h1, h2 {
     color: var(--primary-font-color);
     text-shadow: -2px 0 var(--secondary-font-color), 0 2px var(--secondary-font-color), 2px 0 var(--secondary-font-color), 0 -2px var(--secondary-font-color);
     text-align: center;
+    margin: 0 0 1vh 0
+}
+
+h1 {
+    font-size: min(2em, 7vw);
+}
+
+h2 {
+    font-size: min(1.5em, 5vw);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 body {
     background-color: var(--nice-blue);
     text-align: center;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 2vh 2vw;
 }
+
 
 main {
     padding: 33vh 10vw;
@@ -26,8 +52,9 @@ main {
 .temporary-empty {
     font-family: var(--primary-font), cursive, sans-serif;
     color: var(--primary-font-color);
-    font-size: 1.5em;
+    font-size: min(1.5em, 4vw);
     text-align: center;
+    margin: 0 0 1vh;
 }
 
 #projects-link-container {
