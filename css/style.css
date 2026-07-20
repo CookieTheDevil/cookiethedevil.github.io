@@ -64,7 +64,7 @@ main {
     margin: 0 0 1vh;
 }
 
-#projects-link-container {
+.projects-link-container {
     font-family: var(--primary-font);
     font-size: 1.5em;
     color: var(--secondary-font-color);
@@ -79,15 +79,15 @@ main {
     box-shadow: 5px 5px 5px #008BD1;
 }
 
-#projects-link-container a,
-#projects-link-container a:visited,
-#projects-link-container a:hover,
-#projects-link-container a:active {
+.projects-link-container a,
+.projects-link-container a:visited,
+.projects-link-container a:hover,
+.projects-link-container a:active {
     color: inherit;
     text-decoration: none;
 }
 
-#projects-link-container:hover {
+.projects-link-container:hover {
     background-color: #00AAFF; 
     color: floralwhite; 
     transform: scale(5);
