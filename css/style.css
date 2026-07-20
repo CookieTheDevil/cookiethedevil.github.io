@@ -1,0 +1,8 @@
+:root {
+    --nice-blue: skyblue; 
+}
+
+h1 {
+    color: var(--nice-blue);
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
