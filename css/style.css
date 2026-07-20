@@ -1,21 +1,21 @@
 /*TODO: Divide into multiple files for better organization */
 @font-face {
     font-family: "My Comic Font";
-    src: url("../assets/fonts/comic-font.ttf") format("ttf");
+    src: url("../assets/fonts/comic-font.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 :root {
-    --nice-blue: deepskyblue; 
-    --primary-font: "Comic Sans MS", "My Comic Font", cursive;
-    --primary-font-color: azure; 
+    --nice-blue: deepskyblue;
+    --primary-font: "My Comic Font", "Comic Sans MS", "Comic Sans", cursive;
+    --primary-font-color: azure;
     --secondary-font-color: #00AAFF;
 }
 
 h1, h2 {
-    font-family: var(--primary-font), cursive, sans-serif;
+    font-family: var(--primary-font);
     color: var(--primary-font-color);
     text-shadow: -2px 0 var(--secondary-font-color), 0 2px var(--secondary-font-color), 2px 0 var(--secondary-font-color), 0 -2px var(--secondary-font-color);
     text-align: center;
@@ -57,7 +57,7 @@ main {
 }
 
 .temporary-empty {
-    font-family: var(--primary-font), cursive, sans-serif;
+    font-family: var(--primary-font);
     color: var(--primary-font-color);
     font-size: min(1.5em, 4vw);
     text-align: center;
@@ -65,7 +65,7 @@ main {
 }
 
 #projects-link-container {
-    font-family: var(--primary-font), cursive, sans-serif;
+    font-family: var(--primary-font);
     font-size: 1.5em;
     color: var(--secondary-font-color);
     background-color: floralwhite;
