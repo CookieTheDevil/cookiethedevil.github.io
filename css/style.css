@@ -1,7 +1,7 @@
 /*TODO: Divide into multiple files for better organization */
 @font-face {
     font-family: "My Comic Font";
-    src: url("../assets/fonts/comic-font.woff2") format("woff2");
+    src: url("../assets/fonts/comic-font.ttf") format("ttf");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 :root {
     --nice-blue: deepskyblue; 
-    --primary-font: "My Comic Font", cursive;
+    --primary-font: "Comic Sans MS", "My Comic Font", cursive;
     --primary-font-color: azure; 
     --secondary-font-color: #00AAFF;
 }
