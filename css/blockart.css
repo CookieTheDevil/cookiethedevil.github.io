@@ -1,9 +1,4 @@
 :root {
-    --nice-blue: deepskyblue;
-    --primary-font: "Comic Sans MS";
-    --primary-font-color: azure;
-    --secondary-font-color: #00AAFF;
-
     --art-size: min(82vw, calc(100vh - 13rem));
 }
 
