@@ -15,3 +15,32 @@ Things I'd like to have on my website:
 * A CV site (pls give me a job)
     * A button to turn the page into a pdf'
 * Lightmode, darkmode, and a secret "sandra mode" with comic sans
+
+Plan for the website:
+ 
+```
+sandrakubosch.no/
+│
+├── css/
+│   ├── variables.css
+│   ├── base.css
+│   ├── layout.css
+│   ├── components.css
+│   └── main.css
+│
+├── index.html
+├── about/
+│   └── index.html
+├── projects/
+│   ├── index.html
+│   ├── word-chain/
+│   │   ├── index.html
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   ├── js/
+│   │   └── assets/
+│   └── ...
+│
+├── js/
+└── assets/
+```
