@@ -1,0 +1,3 @@
+[submodule "projects/colors"]
+	path = projects/colors
+	url = https://github.com/CookieTheDevil/colors.git
