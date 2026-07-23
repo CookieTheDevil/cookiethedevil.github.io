@@ -61,7 +61,7 @@ main {
     color: var(--primary-font-color);
     font-size: min(1.5em, 4vw);
     text-align: center;
-    margin: 0 0 1vh;
+    margin-top: 5vh; 
 }
 
 .projects-link-container {
