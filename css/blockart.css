@@ -6,64 +6,14 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    margin: 0;
-    min-height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    padding: 0.5rem;
-
-    background-color: var(--nice-blue);
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-}
-
-h1,
-h2 {
-    font-family: var(--primary-font);
-    color: var(--primary-font-color);
-    text-shadow:
-        -2px 0 var(--secondary-font-color),
-        0 2px var(--secondary-font-color),
-        2px 0 var(--secondary-font-color),
-        0 -2px var(--secondary-font-color);
-
-    text-align: center;
-    margin: 0.2rem 0;
-    line-height: 1.1;
-}
-
-h1 {
-    font-size: min(2rem, 5vh);
-}
-
-h2 {
-    font-size: min(1.5rem, 4vh);
-}
-
 .temporary-empty {
     font-family: var(--primary-font);
     color: var(--primary-font-color);
     font-size: min(1.25rem, 3vh);
     text-align: center;
-
-    margin: 0.15rem 0;
-    line-height: 1.1;
 }
 
-/* Remove the large padding from your existing main rule */
-main {
-    padding: 0;
-}
-
-/* Entire artwork */
+/* -------------- Entire artwork --------------*/
 #art-container {
     width: var(--art-size);
     height: var(--art-size);

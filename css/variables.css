@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Defines reusable design values such as colours, fonts,
    spacing, border radiuses, shadows, and light/dark themes. */
 
 /*TODO: Create color palette, fill with variables to use throughout the site*/
 :root {
     color-scheme: light; 
-    --color-background: #eaf7ff; 
+    --color-background: #83c7ff; 
     --color-surface: #ffffff; 
     --color-surface-soft: #d8eefb; 
 
-    --color-header: #4aa3df; 
+    --color-header: #45acff; 
     --color-primary: #2f7fb7; 
     --color-primary-hover: #256895; 
 
@@ -22,6 +23,8 @@
 
     --color-border: #9fcbe5; 
     --color-shadow: rgb(29 78 111 / 18%);
+
+    --logo-font-family: "Londrina Shadow", sans-serif;
 }
 
 [data-theme="dark"] {

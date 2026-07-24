@@ -10,22 +10,25 @@
 .site-header-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
 
-  width: min(72rem, calc(100% - 3rem));
+  width: calc(100% - 3vw);
   min-height: 5rem;
   margin-inline: auto;
 }
 
 .site-logo {
-  color: inherit;
-  font-size: 1.75rem;
+  color: var(--color-surface);
+  font-family: var(--logo-font-family); 
+  font-size: 3.75rem;
   font-weight: 700;
+  letter-spacing: +2px;
   text-decoration: none;
 }
 
 .site-nav {
-  margin-inline-start: auto;
+  margin: auto;
 }
 
 .site-nav-list {
