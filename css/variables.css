@@ -1,8 +1,53 @@
 /*TODO: Create color palette, fill with variables to use throughout the site*/
 :root {
     color-scheme: light; 
+    --color-background: #eaf7ff; 
+    --color-surface: #ffffff; 
+    --color-surface-soft: #d8eefb; 
+
+    --color-header: #4aa3df; 
+    --color-primary: #2f7fb7; 
+    --color-primary-hover: #256895; 
+
+    --color-accent: #f28ab8; 
+    --color-accent-strong: #db5f98; 
+
+    --color-highlight: #f4c95d;
+
+    --color-text: #17324d; 
+    --color-text-muted: #526f86; 
+
+    --color-border: #9fcbe5; 
+    --color-shadow: rgb(29 78 111 / 18%);
 }
 
 [data-theme="dark"] {
     color-scheme: dark; 
+
+  --color-background: #101c27;
+  --color-surface: #182a38;
+  --color-surface-soft: #203747;
+
+  --color-header: #1d5f8c;
+  --color-primary: #79bce8;
+  --color-primary-hover: #9bd0f1;
+
+  --color-accent: #f3a2c7;
+  --color-accent-strong: #ffbeda;
+
+  --color-highlight: #f6d477;
+
+  --color-text: #edf7fd;
+  --color-text-muted: #afc7d6;
+
+  --color-border: #36586d;
+  --color-shadow: rgb(0 0 0 / 30%);
+}
+
+@font-face {
+    font-family: "My Comic Font";
+    src: url("../assets/fonts/comic-font.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }

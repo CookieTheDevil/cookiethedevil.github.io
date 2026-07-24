@@ -1,17 +1,10 @@
-@import url(".variables.css"); 
-@import url(".base.css"); 
-@import url(".layout.css"); 
-@import url(".header.css"); 
-@import url(".components.css"); 
+@import url("./variables.css"); 
+@import url("./base.css"); 
+@import url("./layout.css"); 
+@import url("./header.css"); 
+@import url("./components.css"); 
 
 /*TODO: Divide into multiple files for better organization */
-@font-face {
-    font-family: "My Comic Font";
-    src: url("../assets/fonts/comic-font.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 :root {
     --nice-blue: deepskyblue;
@@ -44,7 +37,8 @@ body {
 }
 
 body {
-    background-color: var(--nice-blue);
+    background: var(--color-background);
+    color: var(--color-text);
     text-align: center;
     overflow: hidden;
 
@@ -54,7 +48,6 @@ body {
 
     min-height: 100vh;
     box-sizing: border-box;
-    padding: 2vh 2vw;
 }
 
 
