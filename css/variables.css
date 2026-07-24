@@ -1,0 +1,8 @@
+/*TODO: Create color palette, fill with variables to use throughout the site*/
+:root {
+    color-scheme: light; 
+}
+
+[data-theme="dark"] {
+    color-scheme: dark; 
+}
