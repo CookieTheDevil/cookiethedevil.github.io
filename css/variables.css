@@ -1,3 +1,6 @@
+/* Defines reusable design values such as colours, fonts,
+   spacing, border radiuses, shadows, and light/dark themes. */
+
 /*TODO: Create color palette, fill with variables to use throughout the site*/
 :root {
     color-scheme: light; 

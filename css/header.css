@@ -1,3 +1,5 @@
+/* Defines the appearance and responsive behaviour of the shared site header */
+
 .site-header {
   background: var(--color-header);
   color: var(--color-on-primary);

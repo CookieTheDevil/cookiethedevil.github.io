@@ -1,3 +1,7 @@
+/* Main stylesheet entry point.
+   Imports the shared CSS files in the correct order.
+   Avoid placing component or page-specific styles here. */
+
 @import url("./variables.css"); 
 @import url("./base.css"); 
 @import url("./layout.css"); 
