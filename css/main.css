@@ -8,26 +8,4 @@
 @import url("./header.css"); 
 @import url("./components.css"); 
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    background: var(--color-background);
-    color: var(--color-text);
-    text-align: center;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    min-height: 100vh;
-    box-sizing: border-box;
-}
-
-
 

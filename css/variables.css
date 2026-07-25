@@ -1,53 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Londrina+Shadow&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* Defines reusable design values such as colours, fonts,
    spacing, border radiuses, shadows, and light/dark themes. */
 
 /*TODO: Create color palette, fill with variables to use throughout the site*/
 :root {
     color-scheme: light; 
-    --color-background: #83c7ff; 
-    --color-surface: #ffffff; 
-    --color-surface-soft: #d8eefb; 
 
-    --color-header: #45acff; 
-    --color-primary: #2f7fb7; 
-    --color-primary-hover: #256895; 
+  /* Backgrounds */
+  --color-background: #70beff;
+  --color-surface: #ffffff;
+  --color-surface-soft: #e8f4fc;
+  --color-surface-muted: #d2e8f7;
 
-    --color-accent: #f28ab8; 
-    --color-accent-strong: #db5f98; 
+  /* Blues */
+  --color-header: #0f94ff;
+  --color-primary: #0876cc;
+  --color-primary-hover: #065fa7;
+  --color-primary-soft: #b9ddf7;
 
-    --color-highlight: #f4c95d;
+  /* Text */
+  --color-text: #102c44;
+  --color-text-muted: #4f6a7d;
+  --color-text-on-primary: #ffffff;
 
-    --color-text: #17324d; 
-    --color-text-muted: #526f86; 
+  /* Borders and shadows */
+  --color-border: #9bc9e6;
+  --color-border-strong: #4f91bb;
+  --color-shadow: rgb(20 62 92 / 20%);
 
-    --color-border: #9fcbe5; 
-    --color-shadow: rgb(29 78 111 / 18%);
+  /* Focus and small highlights */
+  --color-focus: #063f70;
+  --color-highlight: #d9efff;
 
-    --logo-font-family: "Londrina Shadow", sans-serif;
+  --logo-font-family: "Londrina Shadow", sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --content-width: 100rem;
+  --content-padding: 1.5rem;
 }
 
 [data-theme="dark"] {
-    color-scheme: dark; 
+  color-scheme: dark;
 
-  --color-background: #101c27;
-  --color-surface: #182a38;
-  --color-surface-soft: #203747;
+  /* Backgrounds */
+  --color-background: #0d2233;
+  --color-surface: #152f42;
+  --color-surface-soft: #1d3b50;
+  --color-surface-muted: #264b63;
 
-  --color-header: #1d5f8c;
-  --color-primary: #79bce8;
-  --color-primary-hover: #9bd0f1;
+  /* Blues */
+  --color-header: #075f9e;
+  --color-primary: #74c2ff;
+  --color-primary-hover: #9bd3ff;
+  --color-text: #eef8ff;
+  --color-text-muted: #b5cbd9;
+  --color-text-on-primary: #081c2a;
 
-  --color-accent: #f3a2c7;
-  --color-accent-strong: #ffbeda;
+  /* Borders and shadows */
+  --color-border: #3d6278;
+  --color-border-strong: #70a5c5;
+  --color-shadow: rgb(0 0 0 / 35%);
 
-  --color-highlight: #f6d477;
-
-  --color-text: #edf7fd;
-  --color-text-muted: #afc7d6;
-
-  --color-border: #36586d;
-  --color-shadow: rgb(0 0 0 / 30%);
+  /* Focus and small highlights */
+  --color-focus: #9bd3ff;
+  --color-highlight: #234f6c;
 }
 
 @font-face {

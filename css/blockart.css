@@ -120,3 +120,8 @@
     height: 40%;
     background-color: gold;
 }
+
+#signature {
+    color: #000; 
+    font-family: "My Comic Font", sans-serif;
+}
