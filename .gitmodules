@@ -1,3 +1,6 @@
 [submodule "projects/colors"]
 	path = projects/colors
 	url = https://github.com/CookieTheDevil/colors.git
+[submodule "projects/chameleon"]
+	path = projects/chameleon
+	url = https://github.com/CookieTheDevil/chameleon.git
