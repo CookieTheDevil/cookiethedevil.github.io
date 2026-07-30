@@ -1,70 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Londrina+Shadow&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* Defines reusable design values such as colours, fonts,
    spacing, border radiuses, shadows, and light/dark themes. */
 
-/*TODO: Create color palette, fill with variables to use throughout the site*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root {
-    color-scheme: light; 
+  color-scheme: light; 
 
-  /* Backgrounds */
-  --color-background: #70beff;
-  --color-surface: #ffffff;
-  --color-surface-soft: #e8f4fc;
-  --color-surface-muted: #d2e8f7;
+  --color-background: #F7FAFC;
+  --color-text: #002c5f;
+  --color-logo: #0f94ff;
+  --color-primary: #378ADD;
+  --color-primary-subtle: #E6F1FB;
+  --color-accent: #D85A30;
+  --color-header: #b4e1ff; 
 
-  /* Blues */
-  --color-header: #0f94ff;
-  --color-primary: #0876cc;
-  --color-primary-hover: #065fa7;
-  --color-primary-soft: #b9ddf7;
-
-  /* Text */
-  --color-text: #102c44;
-  --color-text-muted: #4f6a7d;
-  --color-text-on-primary: #ffffff;
-
-  /* Borders and shadows */
-  --color-border: #9bc9e6;
-  --color-border-strong: #4f91bb;
-  --color-shadow: rgb(20 62 92 / 20%);
-
-  /* Focus and small highlights */
-  --color-focus: #063f70;
-  --color-highlight: #d9efff;
-
-  --logo-font-family: "Londrina Shadow", sans-serif;
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Inter", system-ui, sans-serif;
-
-  --content-width: 100rem;
-  --content-padding: 1.5rem;
+  --logo-font-family: "Fraunces", serif;                           /* Display, Logo */
+  --font-body: "IBM Plex Sans", sans-serif;                        /* General */
+  --font-utility: "IBM Plex Mono", system-ui, monospace;           /* Function-like*/
+  --shadow-color: rgb(0 0 0 / 14%);
 }
 
 [data-theme="dark"] {
-  color-scheme: dark;
-
-  /* Backgrounds */
-  --color-background: #0d2233;
-  --color-surface: #152f42;
-  --color-surface-soft: #1d3b50;
-  --color-surface-muted: #264b63;
-
-  /* Blues */
-  --color-header: #075f9e;
-  --color-primary: #74c2ff;
-  --color-primary-hover: #9bd3ff;
-  --color-text: #eef8ff;
-  --color-text-muted: #b5cbd9;
-  --color-text-on-primary: #081c2a;
-
-  /* Borders and shadows */
-  --color-border: #3d6278;
-  --color-border-strong: #70a5c5;
-  --color-shadow: rgb(0 0 0 / 35%);
-
-  /* Focus and small highlights */
-  --color-focus: #9bd3ff;
-  --color-highlight: #234f6c;
+  --color-background: #0B1420;
+  --color-text: #E8F1F8;
+  --color-logo: #7FB8EA;
+  --color-primary: #7FB8EA;
+  --color-primary-subtle: #0C447C;
+  --color-accent: #FF8B5E;
+  --color-header: #10253a;
+  --shadow-color: rgb(0 0 0 / 35%);
 }
 
 @font-face {

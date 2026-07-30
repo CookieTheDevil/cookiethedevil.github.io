@@ -1,42 +1,135 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sandra Kubosch</title>
-        <meta name="description" content="Personal website of Sandra Kubosch">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/main.css">
-        <link rel="stylesheet" href="../css/pages/projects.css">
-    </head>
-    <body>
-        <header class="site-header">
-            <div class="site-header-inner">
-                <a href="/" class="site-logo">SMK</a>
-                
-                <nav class="site-nav" aria-label="Main navigation">
-                    <ul class="site-nav-list">
-                        <li><a href="/" class="site-nav-link" aria-current="page">Home</a></li>
-                        <li><a href="/" class="site-nav-link">About me</a></li>
-                        <li><a href="/projects/" class="site-nav-link">Projects</a></li>
-                        <li><a href="/" class="site-nav-link">About this Website</a></li>
-                    </ul>
-                </nav>
-                
-                <a href="/" class="site-logo">SMK</a>
-            </div>
-        </header>
-        <main>
-            <h1>Hello, World! Sandra, here!</h1>
-            <nav>
-                <div class="projects-link-container">
-                    <a href="/projects/" class="projects-link">Check out my projects!</a>
-                </div>
-                <br>
-                <div class="projects-link-container">
-                    <a href="https://github.com/CookieTheDevil/cookiethedevil.github.io" class="projects-link">Github repo</a>
-                </div>
+<html lang="nb">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Sandra Kubosch</title>
+
+    <meta
+        name="description"
+        content="Personal website of Sandra Kubosch"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages/home.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a href="/" class="site-logo" aria-label="Sandra Kubosch home">
+                SMK
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a
+                    href="/"
+                    class="site-nav-link"
+                    aria-current="page"
+                >
+                    home()
+                </a>
+
+                <a href="/projects/" class="site-nav-link">
+                    projects()
+                </a>
+
+                <a href="/about/" class="site-nav-link">
+                    about()
+                </a>
+
+                <a href="/snapshots/" class="site-nav-link">
+                    snapshots()
+                </a>
             </nav>
-        </main>
-    </body>
+        </div>
+    </header>
+
+    <main class="home-main">
+        <section id="hero-content">
+            <div id="name-box">
+                <p class="comment">/* hi, i'm — */</p>
+
+                <h1 id="home-name">
+                    Sandra Marie Kubosch
+                </h1>
+
+                <p id="sub-title">
+                    informatics student · nerd · tinkerer
+                </p>
+            </div>
+
+            <p id="description">
+                En eller annen tekst som forteller om meg, om nettsiden,
+                om hva jeg ønsker å presentere, og alt som en ny bruker
+                kan være nysgjerrig om. Litt quirky, litt informativ,
+                og generelt ganske oppsummerende. Hilsen!
+            </p>
+
+            <div class="contact">
+                <p>
+                    Man kan kontakte meg,
+                </p>
+
+                <p>
+                    som venn
+                    (
+                    <a
+                        href="https://discord.gg/zgAVzSTG"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Discord
+                    </a>
+                    /
+                    <a
+                        href="https://www.facebook.com/share/18w8p4Mgzt/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Facebook
+                    </a>
+                    /
+                    <a href="tel:+4790174284">
+                        Telefon
+                    </a>
+                    )
+                    eller om arbeid
+                </p>
+
+                <p>
+                    (
+                    <a href="mailto:sandra@kubosch.no">
+                        Epost
+                    </a>
+                    /
+                    <a href="tel:+4790174284">
+                        Telefon
+                    </a>
+                    /
+                    <a
+                        href="https://www.linkedin.com/in/sandra-marie-kubosch-66839a245/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+                    )
+                </p>
+            </div>
+        </section>
+
+        <figure class="portrait">
+            <img
+                src="../assets/pictures/home.jpg"
+                alt="Portrait of Sandra looking to the side"
+            >
+        </figure>
+    </main>
+</body>
 </html>
