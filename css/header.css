@@ -99,7 +99,7 @@
 
 /* Tablet and mobile */
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .site-header,
   .site-header-inner {
     min-height: auto;
