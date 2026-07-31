@@ -1,5 +1,12 @@
 /* Defines the appearance and responsive behaviour of the shared site header */
 
+.site-header,
+.site-header-inner,
+.site-nav {
+  max-width: 100%;
+  min-width: 0;
+}
+
 .site-header {
   width: 100%;
   min-height: 108px;
@@ -14,6 +21,8 @@
   position: sticky;
   top: 0;
   z-index: 10;
+
+  overflow-x: hidden;
 }
 
 .site-header-inner {
@@ -25,6 +34,8 @@
   grid-template-columns: 170px minmax(0, 1fr);
   align-items: center;
   gap: 2rem;
+
+  box-sizing: border-box;
 }
 
 .site-logo {
@@ -41,6 +52,7 @@
 
 .site-nav {
   width: 100%;
+  min-width: 0;
   margin: 0;
   padding: 0;
 
@@ -91,31 +103,34 @@
 
 @media (max-width: 800px) {
   .site-header-inner {
-    padding: 1rem;
+    width: 100%;
+    padding: 1rem clamp(0.75rem, 3vw, 1.25rem);
+
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .site-logo {
-    font-size: 3rem;
+    font-size: clamp(2.75rem, 12vw, 4rem);
   }
 
   .site-nav {
     width: 100%;
 
-    display: flex;
-    justify-content: space-between;
-    gap: clamp(0.25rem, 1.5vw, 0.75rem);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.15rem, 1vw, 0.5rem);
 
-    overflow: visible;
+    overflow: hidden;
   }
 
   .site-nav-link {
-    min-width: 0;
-    padding: 0.5rem 0.15rem;
+    padding: 0.5rem 0.1rem;
 
-    font-size: clamp(0.72rem, 2.8vw, 1rem);
+    font-size: clamp(0.68rem, 3.2vw, 1rem);
     text-align: center;
+    white-space: nowrap;
   }
 }
 
@@ -134,5 +149,20 @@
 
   .site-nav-link {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header-inner {
+    padding-inline: 0.5rem;
+  }
+
+  .site-nav {
+    gap: 0;
+  }
+
+  .site-nav-link {
+    font-size: clamp(0.62rem, 3vw, 0.78rem);
+    letter-spacing: -0.04em;
   }
 }
