@@ -4,3 +4,6 @@
 [submodule "projects/chameleon"]
 	path = projects/chameleon
 	url = https://github.com/CookieTheDevil/chameleon.git
+[submodule "projects/pairadoxle"]
+	path = projects/pairadoxle
+	url = https://github.com/CookieTheDevil/pairadoxle.git
