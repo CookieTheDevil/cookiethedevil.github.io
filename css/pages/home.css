@@ -1,6 +1,6 @@
 main {
   width: min(100%, 1500px);
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 155px);
   margin-inline: auto;
   padding: 1rem 3rem 3.75rem;
 
@@ -24,7 +24,7 @@ main {
 
 .comment {
   margin: 0 0 0.4rem;
-
+  color: var(--color-accent);
   font-family: var(--font-utility);
   font-size: clamp(1.1rem, 1.4vw, 1.4rem);
 }
@@ -43,27 +43,26 @@ main {
 
 #sub-title {
   margin: 0.6rem 0 0;
-
+  color: var(--color-logo);
   font-family: var(--font-body);
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  font-size: clamp(1.5rem, 1.75vw, 1.7rem);
 }
 
 #description {
   max-width: 650px;
-  margin: clamp(3rem, 7vh, 5rem) 0 0 2rem;
+  margin: clamp(2rem, 6vh, 4rem) 0 0 2rem;
 
   font-family: var(--font-utility);
-  font-size: clamp(1.1rem, 1.55vw, 1.45rem);
+  font-size: clamp(1.2rem, 1.65vw, 1.55rem);
   line-height: 1.5;
 }
 
 .contact {
-  margin-top: auto;
   padding-top: 3rem;
 
   text-align: center;
   font-family: var(--font-body);
-  font-size: clamp(1rem, 1.35vw, 1.3rem);
+  font-size: clamp(1.1rem, 1.55vw, 1.45rem);
   line-height: 1.45;
 }
 
@@ -95,6 +94,87 @@ main {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+#github-container {
+    transform: translateY(-50%);
+
+    width: 110px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    margin-inline: auto;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+    position: relative;
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-logo);
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition:
+        width 0.4s,
+        border-radius 0.4s;
+    
+    text-decoration: none;
+}
+
+.svgIcon {
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: auto;
+
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.Btn:hover {
+  width: 110px;
+  transition-duration: .4s;
+  border-radius: 30px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .4s;
+}
+
+.Btn:hover .svgIcon {
+  opacity: 0;
+  transition-duration: .3s;
 }
 
 @media (max-width: 950px) {
