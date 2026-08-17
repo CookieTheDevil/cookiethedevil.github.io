@@ -177,6 +177,214 @@ main {
   transition-duration: .3s;
 }
 
+.contact-link {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+
+    font: inherit;
+    color: inherit;
+
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.discord-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: visibility 0s linear 320ms;
+}
+
+.discord-modal.is-open {
+    visibility: visible;
+    pointer-events: auto;
+
+    transition-delay: 0s;
+}
+
+.discord-modal__overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 35, 75, 0.35);
+    backdrop-filter: blur(2px);
+
+    opacity: 0;
+
+    transition: opacity 220ms ease;
+}
+
+.discord-modal.is-open .discord-modal__overlay {
+    opacity: 1;
+}
+
+.discord-modal__box {
+    --modal-from-x: 0px;
+    --modal-from-y: 0px;
+
+    position: relative;
+    z-index: 1;
+
+    width: min(440px, 100%);
+    padding: 2.5rem;
+
+    background: #f7f9fb;
+
+    border: 3px solid #a8ddfa;
+    border-radius: 24px;
+
+    color: #002b5c;
+
+    transform: translate(
+        var(--modal-from-x),
+        var(--modal-from-y)
+    );
+
+    opacity: 0;
+
+    transition:
+        transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 320ms ease;
+}
+
+.discord-modal.is-open .discord-modal__box {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.discord-modal__close {
+    position: absolute;
+
+    top: 1rem;
+    right: 1.25rem;
+
+    padding: 0;
+
+    border: 0;
+    background: none;
+
+    color: #002b5c;
+
+    font-family: monospace;
+    font-size: 1.8rem;
+
+    cursor: pointer;
+}
+
+.discord-modal__comment {
+    margin: 0 0 0.4rem;
+
+    color: #e7532c;
+
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.discord-modal h2 {
+    margin: 0; 
+
+    color: #002b5c;
+
+    font-size: 2.3rem;
+}
+
+.discord-modal .instructions {
+  margin: 0; 
+}
+
+.discord-username {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin: 0.7rem 0 0.2rem;
+
+    padding: 0.9rem 1rem;
+
+    border: 2px solid #a8ddfa;
+    border-radius: 10px;
+
+    background: white;
+}
+
+.discord-username code {
+    color: #002b5c;
+
+    font-family: monospace;
+    font-size: 1rem;
+
+    overflow-wrap: anywhere;
+}
+
+.discord-copy {
+    flex-shrink: 0;
+
+    padding: 0.45rem 0.7rem;
+
+    background: #1399ed;
+
+    border: 0;
+    border-radius: 7px;
+
+    color: white;
+
+    font-family: monospace;
+
+    cursor: pointer;
+}
+
+.discord-copy:hover {
+    opacity: 0.85;
+}
+
+.discord-copy-status {
+    min-height: 1.4rem;
+
+    margin: 0.3rem 0 1rem;
+
+    color: #1399ed;
+
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.discord-button {
+    display: block;
+
+    padding: 0.8rem 1rem;
+
+    background: #002b5c;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-family: monospace;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+.discord-button:hover {
+    background: #1399ed;
+}
+
 @media (max-width: 950px) {
   main {
     padding: 3rem 1.5rem;
@@ -243,4 +451,16 @@ main {
   .portrait {
     margin-top: 1rem;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .discord-modal,
+    .discord-modal__overlay,
+    .discord-modal__box {
+        transition: none;
+    }
+
+    .discord-modal__box {
+        transform: none;
+    }
 }

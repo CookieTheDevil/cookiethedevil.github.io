@@ -78,11 +78,11 @@
 
                 <p>
                     som venn
-                    (<a
-                        href="https://discord.gg/zgAVzSTG"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Discord</a>
+                    (<button 
+                        type="button" 
+                        class="contact-link" 
+                        id="discord-open"
+                    >Discord</button>
                     /
                     <a
                         href="https://www.facebook.com/share/18w8p4Mgzt/"
@@ -129,5 +129,152 @@
             <span class="text">Github</span>
         </a>
     </div>
+    <div class="discord-modal" id="discord-modal" aria-hidden="true">
+        <div class="discord-modal__overlay"></div>
+
+        <div
+            class="discord-modal__box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="discord-title"
+        >
+            <button
+                type="button"
+                class="discord-modal__close"
+                id="discord-close"
+                aria-label="Lukk"
+            >
+                ×
+            </button>
+
+            <p class="discord-modal__comment">
+                /* add me */
+            </p>
+
+            <h2 id="discord-title">
+                Discord
+            </h2>
+
+            <p class="instructions">
+                Du kan legge meg til som venn med brukernavnet:
+            </p>
+
+            <div class="discord-username">
+                <code id="discord-username">CookieTheDevil</code>
+
+                <button
+                    type="button"
+                    id="discord-copy"
+                    class="discord-copy"
+                >
+                    kopier()
+                </button>
+            </div>
+
+            <p
+                class="discord-copy-status"
+                id="discord-copy-status"
+                aria-live="polite"
+            ></p>
+
+            <a
+                href="https://discord.com/channels/@me"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="discord-button"
+            >
+                openApp(Discord);
+            </a>
+
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById("discord-modal");
+        const openButton = document.getElementById("discord-open");
+        const closeButton = document.getElementById("discord-close");
+
+        const overlay = modal.querySelector(".discord-modal__overlay");
+        const modalBox = modal.querySelector(".discord-modal__box");
+
+        const usernameElement = document.getElementById("discord-username");
+        const copyButton = document.getElementById("discord-copy");
+        const copyStatus = document.getElementById("discord-copy-status");
+
+
+        function openDiscordModal() {
+            const buttonRect = openButton.getBoundingClientRect();
+            const modalRect = modalBox.getBoundingClientRect();
+
+            const buttonCenterX = buttonRect.left + buttonRect.width / 2;
+            const buttonCenterY = buttonRect.top + buttonRect.height / 2;
+            const modalCenterX = modalRect.left + modalRect.width / 2;
+            const modalCenterY = modalRect.top + modalRect.height / 2;
+            const offsetX = buttonCenterX - modalCenterX;
+            const offsetY = buttonCenterY - modalCenterY;
+
+            modalBox.style.transition = "none";
+
+            modalBox.style.setProperty(
+                "--modal-from-x",
+                `${offsetX}px`
+            );
+
+            modalBox.style.setProperty(
+                "--modal-from-y",
+                `${offsetY}px`
+            );
+
+            modal.setAttribute("aria-hidden", "false");
+
+            void modalBox.offsetWidth;
+
+            modalBox.style.transition = "";
+
+            requestAnimationFrame(() => {
+                modal.classList.add("is-open");
+
+                closeButton.focus({
+                    preventScroll: true
+                });
+            });
+        }
+
+
+        function closeDiscordModal() {
+            modal.classList.remove("is-open");
+
+            setTimeout(() => {
+                if (!modal.classList.contains("is-open")) {
+                    modal.setAttribute("aria-hidden", "true");
+                    openButton.focus({ preventScroll: true });
+                }
+            }, 320);
+        }
+
+
+        openButton.addEventListener("click", openDiscordModal);
+        closeButton.addEventListener("click", closeDiscordModal);
+        overlay.addEventListener("click", closeDiscordModal);
+
+        document.addEventListener("keydown", (event) => {
+            if (
+                event.key === "Escape" &&
+                modal.classList.contains("is-open")
+            ) {
+                closeDiscordModal();
+            }
+        });
+
+        copyButton.addEventListener("click", async () => {
+            const username = usernameElement.textContent.trim();
+
+            try {
+                await navigator.clipboard.writeText(username);
+                copyStatus.textContent = "✓ brukernavn kopiert";
+            } catch {
+                copyStatus.textContent = "Marker brukernavnet og kopier det manuelt.";
+            }
+        });
+    </script>
 </body>
 </html>
