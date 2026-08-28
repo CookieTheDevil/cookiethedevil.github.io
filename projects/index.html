@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../css/pages/projects.css">
         <link rel="stylesheet" href="blockart.css">
         <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+        <script src="../js/pages/projects.js" defer></script>
     </head>
     <body>
         <header class="site-header">
@@ -36,40 +37,19 @@
                 </nav>
             </div>
         </header>
-        <main>
-            <h1>Here are some of my projects:</h1>
+    <main class="projects-page">
+      <header class="projects-intro">
+        <p class="comment projects-kicker">/* wow, such cool */</p>
+        <h1 class="projects-title">Projects!</h1>
+        <p class="projects-subtitle">Various results of filling my spare time.</p>
+      </header>
 
-            <div class="projects-link-container" id="colors-link">
-                <a href="/projects/colors" class="projects-link">CSS Named Colors</a>
-            </div>
-        
-            <div class="projects-link-container" id="chameleon-link">
-                <a href="/projects/chameleon" class="projects-link">Chameleon (Server-hosted Backend)</a>
-            </div>
-        
-            <div class="projects-link-container" id="chameleon-link">
-                <a href="/projects/pairadoxle/" class="projects-link">Pairadoxle (Daily Game!)</a>
-            </div>
-
-            <p class="temporary-empty">Ponder this abstract art while you wait for more cool projects...</p>
-            
-            <div id="art-container">
-                <div id="white-surroundings">
-                    <div id="square-holder">
-                        <div class="white" id="first-white"></div>
-                        <div class="white" id="second-white"></div>
-                        <div id="big-red"></div>
-                        <div id="blue-corner">
-                            <p id="signature">S. M. K.</p>
-                        </div>
-                        <div class="white" id="long-white"></div>
-                        <div id="white-yellow">
-                            <div class="white" id="small-white"></div>
-                            <div class="yellow" id="small-yellow"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+      <!-- Cards are generated from the data array in projects.js. -->
+      <section
+        class="projects-grid"
+        id="projects-grid"
+        aria-label="Selected projects"
+      ></section>
+    </main>
     </body>
 </html>
