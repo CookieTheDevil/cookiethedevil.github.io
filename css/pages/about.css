@@ -1,0 +1,955 @@
+/* ==========================================================
+   CV / ABOUT PAGE
+   Uses global variables from variables.css
+   ========================================================== */
+
+
+/* --------------------------
+   Page
+--------------------------- */
+
+.cv-page {
+  width: min(100% - 2rem, 1450px);
+  margin-inline: auto;
+  padding-block: clamp(1.25rem, 2.5vw, 3rem);
+}
+
+/* --------------------------
+   Intro
+--------------------------- */
+
+.cv-intro {
+  max-width: 1100px;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.cv-kicker {
+  margin-bottom: 0.15rem;
+
+  color: var(--color-accent);
+  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
+}
+
+.cv-name {
+  color: var(--color-text);
+
+  font-family: var(--logo-font-family);
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+.cv-subtitle {
+    max-width: 1000px;
+    margin: 1rem 0 0;
+    color: var(--color-logo);
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 1.6;
+}
+
+
+/* --------------------------
+   Short profile
+--------------------------- */
+
+.cv-profile {
+  margin-block: 1rem 1.5rem;
+  padding: clamp(1.4rem, 2.5vw, 2rem);
+
+  border: 2px solid var(--color-header);
+  border-radius: 2rem;
+
+  background: color-mix(
+    in srgb,
+    var(--color-header) 40%,
+    var(--color-background)
+  );
+}
+
+.cv-profile p {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--font-utility);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  line-height: 1.65;
+}
+
+.profile-highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+
+/* --------------------------
+   Main layout
+--------------------------- */
+
+.cv-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 310px)
+    minmax(0, 1fr);
+
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+
+  align-items: start;
+}
+
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+.cv-sidebar {
+  display: grid;
+  gap: 0.8rem;
+
+  position: sticky;
+  top: 130px;
+}
+
+
+/* --------------------------
+   Sidebar cards
+--------------------------- */
+
+.sidebar-card {
+  padding: 1.35rem 1.15rem;
+
+  border: 2px solid var(--color-header);
+  border-radius: 1.75rem;
+
+  background: color-mix(
+    in srgb,
+    var(--color-header) 34%,
+    var(--color-background)
+  );
+}
+
+.sidebar-card-small {
+  font-size: 0.9rem;
+}
+
+.sidebar-card-title {
+  margin: 0 0 0.8rem;
+
+  font-family: var(--font-utility);
+  font-size: 1rem;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+.sidebar-card p {
+  margin: 0;
+
+  line-height: 1.55;
+}
+
+
+/* --------------------------
+   Sidebar list
+--------------------------- */
+
+.sidebar-list {
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  gap: 0.2rem;
+
+  list-style: none;
+
+  font-family: var(--font-utility);
+  font-size: 0.86rem;
+
+  overflow-wrap: anywhere;
+}
+
+.sidebar-list a {
+  text-decoration: none;
+}
+
+.sidebar-links a {
+  display: inline-block;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.sidebar-links a:hover {
+  color: var(--color-logo);
+  transform: translateX(0.2rem);
+}
+
+/* ==========================================================
+   ACKNOWLEDGEMENTS
+   ========================================================== */
+
+.acknowledgement-item {
+  padding: 0.85rem 0.9rem;
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.7rem;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--color-accent) 35%,
+      transparent
+    );
+
+  border-radius: 1rem;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--color-accent) 8%,
+      var(--color-background)
+    );
+
+  color: var(--color-text);
+  text-decoration: none;
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.acknowledgement-item:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--color-accent);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--color-accent) 14%,
+      var(--color-background)
+    );
+}
+
+.acknowledgement-symbol {
+  width: 2rem;
+  height: 2rem;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 999px;
+
+  background: var(--color-accent);
+  color: var(--color-background);
+
+  font-size: 0.9rem;
+}
+
+.acknowledgement-copy {
+  min-width: 0;
+
+  display: grid;
+  gap: 0.1rem;
+}
+
+.acknowledgement-copy strong {
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.acknowledgement-copy span {
+  color: var(--color-primary);
+
+  font-family: var(--font-utility);
+  font-size: 0.65rem;
+}
+
+.acknowledgement-arrow {
+  color: var(--color-accent);
+
+  font-family: var(--font-utility);
+  font-size: 0.85rem;
+}
+
+
+/* ==========================================================
+   REFERENCES
+   ========================================================== */
+
+.references-card {
+  padding-bottom: 1rem;
+}
+
+.reference-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.reference-item {
+  padding: 0.75rem 0.8rem;
+
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 0.8rem 0.8rem 0;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--color-background) 76%,
+      var(--color-header)
+    );
+}
+
+.reference-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.reference-heading strong {
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.reference-tag {
+  padding: 0.15rem 0.35rem;
+
+  border-radius: 999px;
+
+  background: var(--color-primary-subtle);
+
+  color: var(--color-primary);
+
+  font-family: var(--font-utility);
+  font-size: 0.55rem;
+  line-height: 1;
+}
+
+.reference-role,
+.reference-context {
+  margin: 0;
+}
+
+.reference-role {
+  margin-top: 0.2rem;
+
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.reference-context {
+  margin-top: 0.2rem;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-utility);
+  font-size: 0.61rem;
+  line-height: 1.3;
+}
+
+
+/* --------------------------
+   Technology pills
+--------------------------- */
+
+.tech-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  list-style: none;
+}
+
+.tech-list li {
+  padding: 0.35rem 0.55rem;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--color-primary) 50%,
+      transparent
+    );
+
+  border-radius: 999px;
+
+  background: var(--color-background);
+
+  font-family: var(--font-utility);
+  font-size: 0.72rem;
+}
+
+
+/* ==========================================================
+   MAIN CONTENT
+   ========================================================== */
+
+.cv-content {
+  min-width: 0;
+
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+/* --------------------------
+   Section
+--------------------------- */
+
+.cv-section {
+  min-width: 0;
+}
+
+.cv-section.education .cv-card,
+.cv-section.leadership .cv-card {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-primary-subtle);
+  border-radius: 0;
+  padding-inline: 0;
+}
+
+
+/* --------------------------
+   Heading
+--------------------------- */
+
+.section-heading {
+  margin-bottom: 0.7rem;
+
+  display: grid;
+  grid-template-columns: max-content minmax(2rem, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-heading h2 {
+  font-family: var(--font-utility);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 400;
+}
+
+.section-line {
+  height: 1px;
+  background: var(--color-primary);
+}
+
+
+/* ==========================================================
+   CV CARD
+   ========================================================== */
+
+.cv-card {
+  margin-bottom: 0.75rem;
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+
+  border: 2px solid var(--color-header);
+  border-radius: 1.75rem;
+
+  background: color-mix(
+    in srgb,
+    var(--color-header) 28%,
+    var(--color-background)
+  );
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.cv-card:last-child {
+  margin-bottom: 0;
+}
+
+
+/* --------------------------
+   Card heading
+--------------------------- */
+
+.cv-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.cv-card h3 {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.cv-card-subtitle {
+  margin: 0.15rem 0 0;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-utility);
+  font-size: clamp(0.76rem, 1vw, 0.9rem);
+}
+
+.cv-organisation {
+  margin: 0.55rem 0 0;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.cv-date {
+  flex-shrink: 0;
+
+  margin: 0;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+
+  white-space: nowrap;
+}
+
+
+/* --------------------------
+   Bullets
+--------------------------- */
+
+.cv-bullets {
+  margin: 0.8rem 0 0;
+  padding-left: 1.25rem;
+
+  display: grid;
+  gap: 0.35rem;
+
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.cv-bullets li::marker {
+  color: var(--color-primary);
+}
+
+
+/* ==========================================================
+   PROJECTS
+   ========================================================== */
+
+.project-cv-card {
+  position: relative;
+}
+
+.project-heading-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  gap: 0.45rem 0.75rem;
+}
+
+
+/* --------------------------
+   Live/code links
+--------------------------- */
+
+.project-live-link {
+  color: var(--color-primary);
+
+  font-family: var(--font-utility);
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+}
+
+.project-live-link:hover {
+  color: var(--color-logo);
+  text-decoration: underline;
+}
+
+
+/* --------------------------
+   Inline project technologies
+--------------------------- */
+
+.project-tech-inline {
+  margin: 0.75rem 0 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  list-style: none;
+}
+
+.project-tech-inline li {
+  padding: 0.25rem 0.5rem;
+
+  border:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--color-primary) 45%,
+      transparent
+    );
+
+  border-radius: 999px;
+
+  background: var(--color-background);
+
+  font-family: var(--font-utility);
+  font-size: 0.68rem;
+}
+
+
+/* --------------------------
+   Compact leadership cards
+--------------------------- */
+
+.cv-card-compact {
+  padding-block: 1rem;
+}
+
+.leadership-section {
+  --timeline-width: 2px;
+  --timeline-offset: 0.55rem;
+}
+
+.leadership-section .leadership-card {
+  position: relative;
+
+  margin-left: 1.8rem;
+  padding: 1rem 1.25rem;
+
+  border-radius: 1.2rem;
+}
+
+
+/* vertical timeline */
+
+.leadership-section .leadership-card::before {
+  content: "";
+
+  position: absolute;
+  left: -1.85rem;
+  top: -0.8rem;
+  bottom: -0.8rem;
+
+  width: var(--timeline-width);
+
+  background: var(--color-primary-subtle);
+}
+
+
+/* timeline dot */
+
+.leadership-section .leadership-card::after {
+  content: "";
+
+  position: absolute;
+  left: -2.12rem;
+  top: 1.25rem;
+
+  width: 0.6rem;
+  height: 0.6rem;
+
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+
+  background: var(--color-background);
+}
+
+
+/* Current / most important role */
+
+.leadership-section .leadership-card:first-of-type::after {
+  background: var(--color-primary);
+}
+
+
+/* ==========================================================
+   DARK MODE
+   ========================================================== */
+
+[data-theme="dark"] .cv-profile,
+[data-theme="dark"] .sidebar-card,
+[data-theme="dark"] .cv-card {
+  background:
+    color-mix(
+      in srgb,
+      var(--color-header) 40%,
+      var(--color-background)
+    );
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .cv-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-sidebar {
+    position: static;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 620px) {
+
+  .cv-page {
+    width: min(100% - 1.2rem, 42rem);
+  }
+
+  .cv-name {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .cv-profile {
+    border-radius: 1.5rem;
+  }
+
+  .cv-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-card,
+  .cv-card {
+    border-radius: 1.4rem;
+  }
+
+  .cv-card-heading {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .cv-date {
+    white-space: normal;
+  }
+
+  .section-heading {
+    gap: 0.6rem;
+  }
+
+}
+
+
+/* ==========================================================
+   PRINT / PDF CV
+   ========================================================== */
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    background: #ffffff;
+    color: #002c5f;
+
+    font-size: 9pt;
+  }
+
+
+  /* Website navigation does not belong in PDF CV */
+  .site-header {
+    display: none;
+  }
+
+  .cv-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* Intro */
+  .cv-intro {
+    padding-bottom: 4mm;
+  }
+
+  .cv-kicker {
+    font-size: 8pt;
+  }
+
+  .cv-name {
+    font-size: 27pt;
+  }
+
+  .cv-subtitle {
+    margin-top: 2mm;
+    font-size: 10pt;
+  }
+
+
+  /* Profile */
+  .cv-profile {
+    margin-block: 4mm;
+    padding: 4mm 5mm;
+
+    border-width: 1px;
+    border-radius: 5mm;
+
+    background: #eef8ff;
+
+    break-inside: avoid;
+  }
+
+  .cv-profile p {
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+
+
+  /* Layout */
+  .cv-layout {
+    grid-template-columns: 48mm 1fr;
+    gap: 5mm;
+  }
+
+  .cv-sidebar {
+    position: static;
+    gap: 3mm;
+  }
+
+
+  /* Sidebar */
+  .sidebar-card {
+    padding: 3mm;
+
+    border-width: 1px;
+    border-radius: 4mm;
+
+    background: #eef8ff;
+
+    break-inside: avoid;
+  }
+
+  .sidebar-card-title {
+    margin-bottom: 2mm;
+    font-size: 8pt;
+  }
+
+  .sidebar-list,
+  .sidebar-card p {
+    font-size: 7pt;
+  }
+
+  .tech-list {
+    gap: 1.5mm;
+  }
+
+  .tech-list li {
+    padding: 1mm 1.5mm;
+    font-size: 6.5pt;
+  }
+
+
+  /* Sections */
+  .cv-content {
+    gap: 4mm;
+  }
+
+  .section-heading {
+    margin-bottom: 2mm;
+  }
+
+  .section-heading h2 {
+    font-size: 9pt;
+  }
+
+
+  /* Cards */
+  .cv-card {
+    margin-bottom: 2mm;
+    padding: 3mm 4mm;
+
+    border-width: 1px;
+    border-radius: 4mm;
+
+    background: #eef8ff;
+
+    box-shadow: none;
+
+    break-inside: avoid;
+  }
+
+  .cv-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .cv-card h3 {
+    font-size: 8.5pt;
+  }
+
+  .cv-card-subtitle,
+  .cv-date {
+    font-size: 6.5pt;
+  }
+
+  .cv-organisation {
+    margin-top: 1mm;
+    font-size: 7.5pt;
+  }
+
+  .cv-bullets {
+    margin-top: 2mm;
+    padding-left: 4mm;
+
+    gap: 1mm;
+
+    font-size: 7pt;
+    line-height: 1.35;
+  }
+
+
+  /* Project technology tags */
+  .project-tech-inline {
+    margin-top: 2mm;
+    gap: 1mm;
+  }
+
+  .project-tech-inline li {
+    padding: 0.7mm 1.3mm;
+    font-size: 6pt;
+  }
+
+
+  /* Preserve useful URLs in browsers that print them */
+  a {
+    text-decoration: none;
+  }
+
+}
