@@ -33,8 +33,7 @@ const PROJECTS = [
     title: "CSS Named Colors",
     frontTitle: "CSS Named Colors",
     tagline: "A visual reference for the wonderfully specific names built into CSS.",
-    description:
-      "A compact color browser for exploring CSS named colors by sight instead of memorizing keywords. It puts the color and its name side by side, making it quick to scan for a useful shade — or just appreciate that names like papayawhip and darkkhaki are part of the platform.",
+    description: "My first project for my website!! While learning HTML/CSS, it proved to be both useful homework and a great visual guide!",
     image: "../assets/pictures/projects/css-named-colors.png",
     imageAlt: "Grid of CSS named color swatches and their names",
     projectUrl: "/projects/colors/",
