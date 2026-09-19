@@ -16,9 +16,22 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/pages/snapshots.css">
     <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
-</head>
-
 <body>
+    <div
+        id="loading-screen"
+        role="status"
+        aria-live="polite"
+        aria-label="Loading snapshots"
+    >
+        <img
+            class="loading-spinner"
+            src="../assets/icons/favicon.png"
+            alt=""
+            aria-hidden="true"
+        >
+
+        <p>Loading snapshots...</p>
+    </div>
     <header class="site-header">
         <div class="site-header-inner">
             <a href="/" class="site-logo" aria-label="Sandra Kubosch home">
@@ -59,7 +72,7 @@
                     alt="Sandra på huk for å legge blomster foran slottet"
                     width="533"
                     height="947"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -75,7 +88,7 @@
                     alt="En hel gjeng med RF-Regi-nerder på pub-til-pub"
                     width="2048"
                     height="1536"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -91,7 +104,7 @@
                     alt="Sandra veldig gira over en 4-litersmål med sangria"
                     width="1542"
                     height="2047"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -107,7 +120,7 @@
                     alt="The Living Tombstone live in Oslo!"
                     width="533"
                     height="947"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -123,7 +136,7 @@
                     alt="New Macbook with personalized stickers"
                     width="973"
                     height="651"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -139,7 +152,7 @@
                     alt="Sandra Kubosch med et diplom etter bacheloravslutningen"
                     width="3000"
                     height="4000"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -155,7 +168,7 @@
                     alt="Refleksjonen til Sandra i speilet"
                     width="4160"
                     height="6240"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -171,7 +184,7 @@
                     alt="Sandra foran en blomstervegg under oppbygging"
                     width="4284"
                     height="5712"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -187,7 +200,7 @@
                     alt="Refleksjonen til Sandra i speilet i heisen"
                     width="4160"
                     height="6240"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -203,7 +216,7 @@
                     alt="Teknisk dagen 2026 i matchende svarte gensere"
                     width="4160"
                     height="6240"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -219,7 +232,7 @@
                     alt="Closeup av Sandra som viser frem medalje"
                     width="500"
                     height="667"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -235,7 +248,7 @@
                     alt="Sandra smiler og viser medalje"
                     width="500"
                     height="667"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -251,7 +264,7 @@
                     alt="Flettetog med Tiril, Oscar, Sandra, og Hedda"
                     width="730"
                     height="972"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -267,7 +280,7 @@
                     alt="Mann posert med grønn martini"
                     width="621"
                     height="1104"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -283,7 +296,7 @@
                     alt="Sandra sitter foran en laptop under et allmøte"
                     width="768"
                     height="1024"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
             
@@ -299,7 +312,7 @@
                     alt="Sandra krumpet over en laptop"
                     width="1242"
                     height="2208"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
                 >
 
@@ -823,5 +836,6 @@
 
         </section>
     </main>
+    <script src="../js/pages/snapshots.js" defer></script>
 </body>
 </html>
